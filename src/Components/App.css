@@ -1,0 +1,194 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  min-height: 100%; 
+}
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Helvetica, sans-serif;
+  color: #000;
+}
+
+body {
+background-image: url(./img/svg.svg);
+background-repeat: no-repeat;
+}
+
+nav {
+  color: #e90b0b;
+  display: flex;
+  align-items: flex-end;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  flex-direction: column;
+}
+
+ul{
+  list-style: none;
+}
+
+li, a {
+  display: inline-block;
+  padding: 10px 10px;
+  font-family: navFont;
+  font-size: 25px;
+  color:  #CCCCCC;
+  text-decoration: none;
+}
+
+#burger-menu {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+@font-face {
+  font-family: navFont;
+  src: url(./fonts/Kugile_Demo.ttf);
+}
+
+/* CSS */
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+main {
+  flex-grow: 1; 
+  margin-top: 20%; 
+}
+
+
+h2 {
+  font-family: h2Font;
+}
+
+@font-face {
+  font-family: h2Font;
+  src: url(./fonts/TifannyGraniaDemoRegular.ttf);
+}
+
+footer {
+  text-align: center;
+  font-family: footerFont;
+  padding: 0.5rem;
+}
+
+@font-face {
+  font-family: footerFont;
+  src: url(./fonts/RusillaSerif-2OZpl.otf);
+}
+
+
+
+@media (max-width:600px) {
+
+li, a {
+color:#330000;
+}
+
+ul {
+align-items: center;
+}
+
+#nav-links {
+display: none;
+flex-direction: column;
+justify-content: center; 
+align-items: center;
+position: fixed; 
+top: 30%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+#nav-links.active {
+display: flex;
+}
+
+main, h2 {
+  text-align: center;
+  margin-top: 55%;
+  font-size: 40px;
+  margin-bottom: 0%;
+}
+
+.articles-page main, 
+.articles-page h2 {
+  margin-top: 30%;
+}
+
+footer, p {
+font-size: 20px;
+}
+
+.article-title {
+  margin-top:40%;
+  color: #003300;
+}
+
+header {
+  color: #d51313;
+  margin-left: 100%;
+}
+
+footer {
+  text-align: center;
+  font-family: footerFont;
+  padding: 0.5rem;
+  margin-bottom: -20%;
+}
+
+}
+
+@media (min-width: 600px) {
+#burger-menu {
+  display: none; 
+}
+
+#nav-links {
+  display: flex; 
+  flex-direction: row;
+}
+}
