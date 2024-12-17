@@ -112,6 +112,10 @@ footer {
   text-align: center;
   font-family: footerFont;
   padding: 0.5rem;
+  position:fixed;
+  left: 0;
+  bottom:0;
+  width: 100%;
 }
 
 @font-face {
@@ -173,13 +177,6 @@ header {
 
 .button-54 {
   margin-top: 15%;
-}
-
-footer {
-  text-align: center;
-  font-family: footerFont;
-  padding: 0.5rem;
-  margin-bottom: -20%;
 }
 
 }
