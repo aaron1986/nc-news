@@ -12,10 +12,7 @@ export default function Articles() {
 
   useEffect(() => {
     const fetchArticles = async () => {
-      const ARTICLES_API = `https://northcoders-project-week-app.onrender.com/api/articles${
-        searchTerm ? `?author=${encodeURIComponent(searchTerm)}` : ""
-      }`;
-
+      const ARTICLES_API = `https://northcoders-project-week-app.onrender.com/api/articles${searchTerm ? `?author=${encodeURIComponent(searchTerm)}` : ""}`;
       try {
         const res = await axios.get(ARTICLES_API);
         setArticles(res.data.articles);

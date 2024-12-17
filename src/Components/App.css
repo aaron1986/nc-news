@@ -6,7 +6,6 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  min-height: 100%; 
 }
 
 * {
@@ -56,7 +55,7 @@ li, a {
   color: #fff;
   font-size: 30px;
   cursor: pointer;
-  margin: 10px;
+  margin: -9px;
 }
 
 @font-face {
@@ -113,6 +112,10 @@ footer {
   text-align: center;
   font-family: footerFont;
   padding: 0.5rem;
+  position:fixed;
+  left: 0;
+  bottom:0;
+  width: 100%;
 }
 
 @font-face {
@@ -138,7 +141,7 @@ flex-direction: column;
 justify-content: center; 
 align-items: center;
 position: fixed; 
-top: 30%;
+top: 23%;
 left: 50%;
 transform: translate(-50%, -50%);
 }
@@ -170,14 +173,10 @@ font-size: 20px;
 
 header {
   color: #d51313;
-  margin-left: 100%;
 }
 
-footer {
-  text-align: center;
-  font-family: footerFont;
-  padding: 0.5rem;
-  margin-bottom: -20%;
+.button-54 {
+  margin-top: 15%;
 }
 
 }
