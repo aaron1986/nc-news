@@ -8,3 +8,5 @@ Notes:</br>
 (4) I created a button that outputs the API data to screen on another page, viewing a list of all articles.</br>
 (5) I created a page that allows views of an individual article when the link is pressed.</br>
 (6) I added CSS (mobile first) to the code.</br>
+(7) I implemented the list of comments associated with each article in the API. I added code to the ArticlesDetails file including a new API to fetch the comments. I then created a map to loop through the API.</br>
+(8) I used bootstrap to design a card for each article.</br>

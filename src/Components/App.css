@@ -95,17 +95,23 @@ li, a {
 
 main {
   flex-grow: 1; 
-  margin-top: 20%; 
+  margin-top: 40%; 
 }
 
 
 h2 {
   font-family: h2Font;
+  font-size: 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
 
 @font-face {
   font-family: h2Font;
-  src: url(./fonts/TifannyGraniaDemoRegular.ttf);
+  src: url(../../fonts/ChicAvenue-Regular.otf);
 }
 
 footer {
@@ -152,14 +158,13 @@ display: flex;
 
 main, h2 {
   text-align: center;
-  margin-top: 55%;
+  margin-top: 38%;
   font-size: 40px;
   margin-bottom: 0%;
 }
 
-.articles-page main, 
-.articles-page h2 {
-  margin-top: 30%;
+.comments-container {
+  margin-top: -35%;
 }
 
 footer, p {
