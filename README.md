@@ -1,7 +1,7 @@
 ![Wireframe Image](./wireframes_projects.png)
 
 
-Notes:
+Notes:</br>
 (1) I have setup the Repository on GitHub.</br>
 (2) I have installed and created the cors on my back-end repo project.</br>
 (3) I have created a wireframe and planned my components, note Authentication is going to one of the last things I do on the project.</br>
