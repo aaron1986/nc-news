@@ -13,6 +13,8 @@ export default function Articles() {
   useEffect(() => {
     const fetchArticles = async () => {
       const ARTICLES_API = `https://northcoders-project-week-app.onrender.com/api/articles${searchTerm ? `?author=${encodeURIComponent(searchTerm)}` : ""}`;
+      {/* If searchTerm is(truthy: results found), it appends ?author=<searchTerm> to the URL. 
+          If searchTerm is falsy (no results found), no query string is appended. */}
       try {
         const res = await axios.get(ARTICLES_API);
         setArticles(res.data.articles);
