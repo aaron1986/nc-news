@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -24,6 +23,11 @@ html, body {
 body {
 background-image: url(./img/svg.svg);
 background-repeat: no-repeat;
+width: 100%;
+}
+
+header {
+  justify-items: center;
 }
 
 nav {
@@ -93,15 +97,10 @@ li, a {
   }
 }
 
-main {
-  flex-grow: 1; 
-  margin-top: 40%; 
-}
-
-
 h2 {
   font-family: h2Font;
   font-size: 40px;
+  margin-top: 50%;
 }
 
 .container {
@@ -195,4 +194,23 @@ header {
   display: flex; 
   flex-direction: row;
 }
+
+}
+
+.container {
+  margin-top: 65%;
+}
+
+.article-detail {
+  margin-top: 25%;
+}
+
+.comments-container {
+  margin-top: -45%;
+}
+
+#article-text {
+  font-family: h2Font;
+  font-size: 40px;
+  margin-top: 3%;
 }

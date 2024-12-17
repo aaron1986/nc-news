@@ -10,3 +10,5 @@ Notes:</br>
 (6) I added CSS (mobile first) to the code.</br>
 (7) I implemented the list of comments associated with each article in the API. I added code to the ArticlesDetails file including a new API to fetch the comments. I then created a map to loop through the API.</br>
 (8) I used bootstrap to design a card for each article.</br>
+(9) I created a basic Counter file that incremented a count in the console and on the screen.</br>
+(10) I implemented the code from the basic counter into the article vote page. Moreover, I added the API via the comments. 

@@ -30,9 +30,11 @@ export default function Articles() {
 
   return (
     <>
-    {searchTerm && <h2>Search Results for: {searchTerm}</h2>}
+    
+    
     <div className="container">
       <div className="row">
+      <div id="article-text">Articles</div>
         {articles.map((article) => (
           <div key={article.article_id} className="col-md-4 mb-4">
             <Card style={{ width: "18rem" }}>
@@ -57,6 +59,7 @@ export default function Articles() {
         ))}
       </div>
     </div>
+  
   </>
       );      
 }
