@@ -21,7 +21,7 @@ html, body {
 }
 
 body {
-background-image: url('./img/svg.svg');
+background-image: url('./svg.svg');
 background-repeat: no-repeat;
 width: 100%;
 }
@@ -111,7 +111,7 @@ h2 {
 
 @font-face {
   font-family: h2Font;
-  src: url(../../fonts/ChicAvenue-Regular.otf);
+  src: url(./fonts/ChicAvenue-Regular.otf);
 }
 
 section {
