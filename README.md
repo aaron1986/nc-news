@@ -12,3 +12,5 @@ Notes:</br>
 (8) I used bootstrap to design a card for each article.</br>
 (9) I created a basic Counter file that incremented a count in the console and on the screen.</br>
 (10) I implemented the code from the basic counter into the article vote page. Moreover, I added the API via the comments. 
+(11) I added the about mne and contact pages to the site, I also created the CSS for both pages.
+(12) 

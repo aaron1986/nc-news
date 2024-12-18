@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import './Components/App.css';
 import Header from './Components/Header';
-import Footer from './Components/Footer';
 import ArticlesList from './Components/ArticlesList';
 import ArticleDetail from './Components/ArticlesDetails';
 import MainContent from './Components/MainContent';
 import Articles from './Components/Articles';
+import About from "./Components/About";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
         <Route path="/" element={<ArticlesList />} />
         <Route path="/articles/:articleId" element={<ArticleDetail />} />
         <Route path="/articles" element={<Articles />} />
+        <Route path="/about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
-      <Footer />
     </Router>
   );
 }
