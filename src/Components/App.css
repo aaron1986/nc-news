@@ -21,6 +21,7 @@ html, body {
 }
 
 body {
+  background-image: url('/svg.png');
 background-repeat: no-repeat;
 width: 100%;
 }
