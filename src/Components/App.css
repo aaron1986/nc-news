@@ -21,7 +21,7 @@ html, body {
 }
 
 body {
-background-image: url('./wireframes_projects.png');
+background-image: url('../wireframes_projects.png');
 background-repeat: no-repeat;
 width: 100%;
 }
