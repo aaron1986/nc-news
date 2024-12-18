@@ -216,23 +216,31 @@ display: flex;
 }
 
 main, h2 {
-  text-align: center;
   margin-top: 38%;
+  text-align: center;
   font-size: 40px;
   margin-bottom: 0%;
+}
+
+.contact-text {
+  margin-top: 85%;
+}
+
+.container {
+  margin-top: 110%;
 }
 
 .comments-container {
   margin-top: -35%;
 }
 
+.about-text {
+  margin-top: 66%;
+}
+
 .article-title {
   margin-top:40%;
   color: #003300;
-}
-
-header {
-  color: #d51313;
 }
 
 .button-54 {
@@ -278,6 +286,4 @@ header {
   margin-top: 3%;
 }
 
-
-/* form delete */
 
