@@ -13,5 +13,6 @@ Notes:</br>
 (9) I implemented code into ArticlesDetails that incremented a count in the console and on the screen.</br>
 (10) I implemented the code from the basic counter into the ArticlesDetails page. Moreover, I added the API via patch. </br>
 (11) I added the about me and contact pages to the site, I also created the CSS for both pages. </br>
-(12) I added code to the Articles page to display a message saying 'Loading Articles, Please wait...', I did this using a isLoading state and adding a finally statement after the catch code. Lastly, I added a small 'if statement':  if (isLoading) { return <p>Loading Articles, Please wait...</p>; } </br>
+(12) I added code to the Articles page to display a message saying 'Loading Articles, Please wait...', I did this using a isLoading state and adding a finally statement after the catch code. Lastly, I added a small 'if statement':  if (isLoading) { return Loading Articles, Please wait...; } </br>
+<13> 
 
