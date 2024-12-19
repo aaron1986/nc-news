@@ -12,19 +12,16 @@ export default function ArticleDetail() {
     const [posting, setPosting] = useState(false);
     const [postError, setPostError] = useState(null);
     const [postSuccess, setPostSuccess] = useState(false);
-    const [deletingCommentId, setDeletingCommentId] = useState(null);
-    const [deleteError, setDeleteError] = useState(null);
+    const [deleteLoading, setDeleteLoading] = useState({}); 
 
     useEffect(() => {
         const fetchArticleAndComments = async () => {
             try {
-                // Fetch article
                 const articleRes = await axios.get(
                     `https://northcoders-project-week-app.onrender.com/api/articles/${articleId}`
                 );
                 setArticle(articleRes.data.article);
 
-                // Fetch comments
                 const commentsRes = await axios.get(
                     `https://northcoders-project-week-app.onrender.com/api/articles/${articleId}/comments`
                 );
@@ -72,7 +69,7 @@ export default function ArticleDetail() {
         try {
             const res = await axios.post(
                 `https://northcoders-project-week-app.onrender.com/api/articles/${articleId}/comments`,
-                { body: newComment, username: "grumpy19" } 
+                { body: newComment, username: "grumpy19" }
             );
 
             setComments((prevComments) => [res.data.comment, ...prevComments]);
@@ -87,24 +84,25 @@ export default function ArticleDetail() {
     };
 
     const handleDeleteComment = async (commentId) => {
-        setDeleteError(null);
-        setDeletingCommentId(commentId);
+        setDeleteLoading((prev) => ({ ...prev, [commentId]: true }));
 
         try {
             await axios.delete(
-                `https://northcoders-project-week-app.onrender.com/api/articles/${articleId}/comments/${commentId}`
+                `https://northcoders-project-week-app.onrender.com/api/comments/${commentId}`
             );
 
-            setComments((prevComments) => prevComments.filter((comment) => comment.comment_id !== commentId));
+            setComments((prevComments) =>
+                prevComments.filter((comment) => comment.comment_id !== commentId)
+            );
         } catch (err) {
             console.error("Error deleting comment:", err);
-            setDeleteError("Failed to delete comment. Please try again.");
+            alert("Failed to delete comment. Please try again.");
         } finally {
-            setDeletingCommentId(null);
+            setDeleteLoading((prev) => ({ ...prev, [commentId]: false }));
         }
     };
 
-    if (isLoading) return <p>Loading...</p>;
+    if (isLoading) return <p>Loading Please wait...</p>;
 
     return (
         <div className="article-detail">
@@ -118,7 +116,7 @@ export default function ArticleDetail() {
                         <strong>Votes:</strong> {article.votes}
                         <button onClick={() => handleVote(1)}>👍</button>
                         <button onClick={() => handleVote(-1)}>👎</button>
-                        {/* Memo to self: Window key and Full-Stop(Period) at the same time */}
+                        {/* Window key and Full-Stop(Period) at the same time */}
                     </p>
                     {voteError && <p style={{ color: "red" }}>{voteError}</p>}
                 </div>
@@ -134,7 +132,7 @@ export default function ArticleDetail() {
                         placeholder="Write your comment here..."
                         disabled={posting}
                     ></textarea>
-                    <button type="submit" disabled={posting}>Post Comment</button>
+                    <button className="button-54" type="submit" disabled={posting}>Post Comment</button>
                 </form>
                 {postError && <p style={{ color: "red" }}>{postError}</p>}
                 {postSuccess && <p style={{ color: "green" }}>Comment posted successfully!</p>}
@@ -145,12 +143,12 @@ export default function ArticleDetail() {
                             <p><strong>Author:</strong> {comment.author}</p>
                             <p>{comment.body}</p>
                             <p><small>{new Date(comment.created_at).toLocaleDateString()}</small></p>
-                            {comment.author === "grumpy19" && ( 
+                            {comment.author === "grumpy19" && (
                                 <button className="button-50"
                                     onClick={() => handleDeleteComment(comment.comment_id)}
-                                    disabled={deletingCommentId === comment.comment_id}
+                                    disabled={deleteLoading[comment.comment_id]}
                                 >
-                                    {deletingCommentId === comment.comment_id ? "Deleting..." : "Delete"}
+                                    {deleteLoading[comment.comment_id] ? "Deleting..." : "Delete"}
                                 </button>
                             )}
                         </div>
@@ -158,8 +156,6 @@ export default function ArticleDetail() {
                 ) : (
                     <p>No comments available for this article.</p>
                 )}
-
-                {deleteError && <p style={{ color: "red" }}>{deleteError}</p>}
             </div>
         </div>
     );

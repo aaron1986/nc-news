@@ -59,7 +59,6 @@ li, a {
   color: #fff;
   font-size: 30px;
   cursor: pointer;
-  margin: -9px;
 }
 
 @font-face {
@@ -270,7 +269,7 @@ justify-content: center;
 align-items: center;
 position: fixed; 
 top: 23%;
-left: 50%;
+left: 47%;
 transform: translate(-50%, -50%);
 }
 
