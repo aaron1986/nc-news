@@ -21,7 +21,7 @@ html, body {
 }
 
 body {
-  background-image: url('/svg.png');
+background-image: url('../../img/svg.png');
 background-repeat: no-repeat;
 width: 100%;
 }
@@ -248,7 +248,6 @@ main, h2 {
 }
 
 header {
-  border: 2px solid yellow;
   display: flex;
   flex-direction: column;
 }
