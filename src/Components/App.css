@@ -248,7 +248,6 @@ main, h2 {
 }
 
 header {
-  border: 2px solid yellow;
   display: flex;
   flex-direction: column;
 }
