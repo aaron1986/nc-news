@@ -24,6 +24,8 @@ export default function Header() {
         <li><a href="/contact">Contact</a></li>
         <li><a href="/about">About</a></li>
       </ul>
+
+      <h2>Search API for Articles</h2>
     </header>
   );
 }
