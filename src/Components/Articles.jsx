@@ -35,27 +35,34 @@ export default function Articles() {
 
   return (
     <>
+      <div id="article-text">Articles</div>
       <div className="container">
         <div className="row">
-          <div id="article-text">Articles</div>
           {articles.map((article) => (
             <div key={article.article_id} className="col-md-4 mb-4">
-              <Card style={{ width: "18rem" }}>
+              <Card style={{ width: "18rem", height: "100%" }}>
                 <Card.Img
                   variant="top"
                   src={article.article_img_url}
                   alt={article.title}
                   style={{ height: "180px", objectFit: "cover" }}
                 />
-                <Card.Body>
+                <Card.Body className="card-body">
                   <Card.Title>{article.title}</Card.Title>
                   <Card.Text>
                     <strong>Author:</strong> {article.author} <br />
                     <strong>Topic:</strong> {article.topic}
                   </Card.Text>
-                  <Button variant="primary" as={Link} to={`/articles/${article.article_id}`}>
-                    Read More
-                  </Button>
+                  <div className="button-container">
+                    <Button
+                      className="button-54"
+                      variant="primary"
+                      as={Link}
+                      to={`/articles/${article.article_id}`}
+                    >
+                      Read More
+                    </Button>
+                  </div>
                 </Card.Body>
               </Card>
             </div>
@@ -64,4 +71,5 @@ export default function Articles() {
       </div>
     </>
   );
+  
 }
